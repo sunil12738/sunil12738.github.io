@@ -23,11 +23,16 @@
 				a.src = sriptSrc;
 				m.parentNode.insertBefore(a, m)
 			})(window, document, 'script', 'https://www.phonepe.com/webstatic/garfield-js/garfield-js.5e04ccee.js', 'ga');
+		function create(){
+			alert("create")
+			ga("create", { id: "IN_APP" });
+		}
 		function executePageView() {
-			alert("calling page view");
+			alert("send")
 			ga('send', 'pageview');
 		}
         </script>
-	    <button onclick="executePageView()">Execute Page View</button>
+	    <button onclick="executePageView()">Create</button>
+	    <button onclick="executePageView()">Send Page View</button>
     </body>
 </html>
